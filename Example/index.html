@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/0261f7546c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.0.0/cropper.min.css" integrity="sha256-FeDcPwV8ZgxG1MU5L/b2i8clOmqZJKK0eyDHqrQaXxY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="first-item">
+            <i class="fa-sharp fa-solid fa-chevron-left fa-xl icon"></i>
+        </div>
+        <div class="second-item">
+            <h2>Add Image / Icon</h2>
+        </div>
+    </div>
+    
+    <div class="main-screen">
+        <div class="box">
+            <h3>Upload Image</h3>
+            <!-- <input type="file" class="inputFile" style="display:none" accept=".png, .jpg"> -->
+            <input type="file" class="inputFile" style="display:none" name="image" id="image" onchange="readURL(this);"/>
+            <button class="upload"><span>Choose from Device</span></button>
+        </div>
+        <div class="image_container" id ="image-crop">
+            <img id="blah" src="#" alt="your image" />
+        </div>
+        <!-- <div class="saved-image"><img class="result"></div> -->
+    </div>
+    <div class="image_container_result" ><img id="cropped_result" /></div>
+
+    <!-- // Cropped image to display (only if u want) -->
+     
+    <!-- // Will trigger crop event -->
+    <button id="crop_button">Crop</button>
+    <button id="rotate-button">Rotate Image</button>
+    <button id="Transform-img">Transform</button>
+
+    <div>
+        <button id="heart-btn" ><img class="shapebtn" src="asset\user_image_frame_1.png" alt="img1"></button>
+        <button id="square-btn" ><img class="shapebtn" src="asset\user_image_frame_2.png" alt="img1"></button>
+        <button id="rectangle-btn"><img class="shapebtn rect" src="asset\user_image_frame_4.png" alt="img1"></button>
+        <button id="circle-btn"><img class="shapebtn" src="asset\user_image_frame_3.png" alt="img1"></button>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.0.0/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
